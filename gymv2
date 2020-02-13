@@ -64,8 +64,7 @@ int cost_of_fee_per_yr;
 			break;
 		}
 
-		// Runs the for table loop, calculating cost for each year as
-		// N1 * Rate, N2 * Rate, etc. Output all 10 years to user. 
+		
 		if (member == '1' || member == '2' || member == '3')
 		{
 		 for(cost_of_fee_per_yr = 1; cost_of_fee_per_yr <= 10;) {
