@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 
-const double GOLD = .01,         // Gold Interest Rate %1
+const float GOLD = .01,         // Gold Interest Rate %1
            	 SILVER = .02,		  // Silver Interest Rate %2
 		         BRONZE = .04;       // Bronze Interest Rate %4
 		
