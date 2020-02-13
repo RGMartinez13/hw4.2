@@ -10,7 +10,7 @@ const float GOLD = .01,         // Gold Interest Rate %1
 		         BRONZE = .04;       // Bronze Interest Rate %4
 		
 
-	double cost,                // Cost each year is Rate * Base Cost, then Cost * Rate per year.
+	double cost,                
 		   rate;               // % Rate based on Membership level selection 
 
 	int year;                   // Used to display year of membership
@@ -37,14 +37,14 @@ int cost_of_fee_per_yr;
 		cout << fixed << showpoint << setprecision(2);
 
 
-		// Input Validation , Other than 1-4 will loop back to input until correct choice. 
+		// Input Validation  
 		while (member < '1' || member > '4')
 		{
 			cout << "Invalid Selection, please select Option 1-4\n";
 			cin >> member;
 		}
 
-		// User Input of Option 1-3 branches program into Switch 1-3 Cases
+		// User Input of Option 1-3
 		switch (member)
 		{
 
