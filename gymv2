@@ -1,0 +1,90 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+
+const double GOLD = .01,         // Gold Interest Rate %1
+           	 SILVER = .02,		  // Silver Interest Rate %2
+		         BRONZE = .04;       // Bronze Interest Rate %4
+		
+
+	double cost,                // Cost each year is Rate * Base Cost, then Cost * Rate per year.
+		   rate;               // % Rate based on Membership level selection 
+
+	int year;                   // Used to display year of membership
+	char member = '0';             // Used to store user input of membership level
+
+double initial_gym_fee = 1200.00;
+double total_fee = 0.0;
+int cost_of_fee_per_yr;
+
+	do
+	{
+
+		// User Prompt to Select Membership value 1-4.
+		cout << "\t Welcome to Ronda's Strikeforce Gym! " << endl;
+		cout << "--------------------------------------------" << endl;
+		cout << "\t Membership Fee Calculator\n" << endl;
+		cout << " 1.  Gold\n";
+		cout << " 2.  Silver\n";
+		cout << " 3.  Bronze\n";
+		cout << " 4.  Quit\n" << endl;
+		cout << "Please Enter your Membership Level ( 1-3 , 4 to Quit) \n";
+		cin >> member;
+		cout << endl;
+		cout << fixed << showpoint << setprecision(2);
+
+
+		// Input Validation , Other than 1-4 will loop back to input until correct choice. 
+		while (member < '1' || member > '4')
+		{
+			cout << "Invalid Selection, please select Option 1-4\n";
+			cin >> member;
+		}
+
+		// User Input of Option 1-3 branches program into Switch 1-3 Cases
+		switch (member)
+		{
+
+			// Gold Interest Rate Fees Over 10 Years
+			// rate = Gold
+		case '1': rate = GOLD;
+			break;
+
+			// Silver Interest Rate Fees Over 10 Years
+			// rate = Silver 
+		case '2': rate = SILVER;
+			break;
+
+			// Bronze Interest Rate Fees Over 10 Years
+			// rate = Bronze  
+		case '3': rate = BRONZE;
+			break;
+		}
+
+		// Runs the for table loop, calculating cost for each year as
+		// N1 * Rate, N2 * Rate, etc. Output all 10 years to user. 
+		if (member == '1' || member == '2' || member == '3')
+		{
+		 for(cost_of_fee_per_yr = 1; cost_of_fee_per_yr <= 10;) {
+
+    cout << "Year" << setw(4) << cost_of_fee_per_yr << setw(10) << initial_gym_fee << endl;
+
+    total_fee = initial_gym_fee * rate;
+    initial_gym_fee += total_fee;
+
+    cost_of_fee_per_yr++;
+     }
+  }
+
+
+	} while (member != '4');
+
+	// If User Selects 4, Exits program. Menu loops 1-3, Invalid otherwise, and Exit on 4.
+	if (member == '4')
+		cout << "\nThank you for using Rhonda's Fee Calculator!\n" << endl;
+
+	return 0;
+}
