@@ -89,3 +89,24 @@ int cost_of_fee_per_yr;
 
 	return 0;
 }
+
+
+/*
+Algorithm Used
+1. Start
+2. Declare Constants & Variables
+a. Constants GOLD = 1.01 , SILVER = 1.02, BRONZE - 1.04, BASE_COST = 1200.00
+b. double = cost, rate;  int = year ; char = member ;
+3. Output Welcome Screen & Menu Options to User
+4. Ask user for input to menu selection. 1 -4 options. Stored into char member variable.
+5. Validate user input with while loop.
+6. Switch branch user selection into Member Levels based on member variable
+a. 1 = Gold, 2 = Silver, 3 = Bronze
+7. Inside of each switch rate is set to GOLD / SILVER / BRONZE.
+8. Run a table loop that iterates 10 times, once for each of 10 years.
+a. each loop cost is initialized as =  BASE_COST * rate.
+b. after each loop run cost *= rate. So N1 * Rate, N2 * Rate, etc. for 10 Iterations.
+C. output to user the 10 loops as a formatted table.
+9. Loop back to main menu after each selection with do / while loop
+10. End program on Quit selection , and thank user for using program.
+*/
