@@ -74,7 +74,7 @@ int cost_of_fee_per_yr;
     cout << "Year" << setw(4) << cost_of_fee_per_yr << setw(10) << initial_gym_fee << endl;
 
     total_fee = initial_gym_fee * rate;
-    initial_gym_fee += total_fee;
+    initial_gym_fee += total_fee;	// accumulator
 
     cost_of_fee_per_yr++;
      }
